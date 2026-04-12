@@ -1,0 +1,2312 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="خطة اقتصادية بديلة لمصر - نموذج عملي لإعادة بناء الاقتصاد والتكامل العابر للحدود وتوجيه رأس المال">
+<title>خطة اقتصادية بديلة لمصر | طارق ثروت يوسف</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1a3a5c;
+    --primary-light: #2a5080;
+    --accent: #c8a96e;
+    --accent-light: #e8d5a3;
+    --bg: #f8f6f1;
+    --bg-white: #ffffff;
+    --text: #1e2a38;
+    --text-muted: #5a6a7a;
+    --border: #d8d0c0;
+    --success: #2e7d52;
+    --warning: #8b5e00;
+    --shadow: 0 2px 12px rgba(26,58,92,0.10);
+    --shadow-lg: 0 6px 30px rgba(26,58,92,0.15);
+    --radius: 10px;
+    --radius-lg: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Cairo', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 16px;
+  }
+
+  /* ===== NAVIGATION ===== */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--primary);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .nav-logo {
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 4px;
+    list-style: none;
+    overflow-x: auto;
+    padding: 4px 0;
+  }
+
+  .nav-menu a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+
+  .nav-menu a:hover {
+    background: rgba(200,169,110,0.25);
+    color: var(--accent);
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .hamburger span {
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: linear-gradient(135deg, #0d2137 0%, #1a3a5c 50%, #1e4d7a 100%);
+    color: white;
+    padding: 80px 20px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+
+  .hero-content { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(200,169,110,0.2);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 6px 20px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    color: white;
+  }
+
+  .hero h1 span { color: var(--accent); }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 40px;
+    font-weight: 400;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--primary);
+  }
+
+  .btn-primary:hover {
+    background: #dfc07e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(200,169,110,0.4);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.5);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  /* ===== STATS CARDS ===== */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .stat-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(200,169,110,0.3);
+    border-radius: var(--radius);
+    padding: 20px 16px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--accent);
+    display: block;
+    line-height: 1.2;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.7);
+    margin-top: 4px;
+  }
+
+  /* ===== AUTHOR ===== */
+  .author-section {
+    background: var(--bg-white);
+    padding: 60px 20px;
+    border-bottom: 3px solid var(--accent);
+  }
+
+  .author-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .author-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent);
+    box-shadow: var(--shadow-lg);
+    flex-shrink: 0;
+  }
+
+  .author-info h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 6px;
+  }
+
+  .author-title {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .author-bio {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  /* ===== TOC ===== */
+  .toc-section {
+    background: var(--primary);
+    color: white;
+    padding: 50px 20px;
+  }
+
+  .toc-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 12px;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+  }
+
+  .toc-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: rgba(255,255,255,0.07);
+    border-radius: var(--radius);
+    border: 1px solid rgba(200,169,110,0.2);
+    text-decoration: none;
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+
+  .toc-item:hover {
+    background: rgba(200,169,110,0.15);
+    color: var(--accent);
+    border-color: var(--accent);
+    transform: translateX(-4px);
+  }
+
+  .toc-num {
+    background: var(--accent);
+    color: var(--primary);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  /* ===== MAIN CONTENT ===== */
+  .main-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section:last-child { border-bottom: none; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .section-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+  }
+
+  .section h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 28px 0 14px;
+    padding-right: 14px;
+    border-right: 4px solid var(--accent);
+  }
+
+  .section p {
+    color: var(--text);
+    margin-bottom: 16px;
+    font-size: 0.97rem;
+    line-height: 1.9;
+  }
+
+  /* ===== HIGHLIGHT BOX ===== */
+  .highlight-box {
+    background: linear-gradient(135deg, #fff9ee, #fff3d6);
+    border: 1px solid var(--accent);
+    border-right: 5px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+
+  .highlight-box strong {
+    color: var(--warning);
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+  }
+
+  .highlight-box p {
+    margin: 0;
+    color: var(--text);
+    font-size: 0.93rem;
+  }
+
+  /* ===== INFO BOX ===== */
+  .info-box {
+    background: #eef5ff;
+    border: 1px solid #b8d4f8;
+    border-right: 5px solid var(--primary);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+
+  /* ===== KEY NUMBERS ===== */
+  .key-numbers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 28px 0;
+  }
+
+  .key-number-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+
+  .key-number-card .number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary);
+    display: block;
+  }
+
+  .key-number-card .number.accent { color: var(--accent); }
+  .key-number-card .number.success { color: var(--success); }
+
+  .key-number-card .label {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  /* ===== TABLES ===== */
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 24px 0;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-white);
+    font-size: 0.88rem;
+  }
+
+  thead th {
+    background: var(--primary);
+    color: white;
+    padding: 14px 16px;
+    text-align: right;
+    font-weight: 700;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  tbody tr:nth-child(even) { background: #f5f3ef; }
+  tbody tr:hover { background: #eef5ff; }
+
+  tbody td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    vertical-align: top;
+  }
+
+  tbody tr:last-child td {
+    background: #e8f0e8;
+    font-weight: 700;
+    color: var(--success);
+  }
+
+  /* ===== BULLET LIST ===== */
+  .styled-list {
+    list-style: none;
+    margin: 16px 0;
+  }
+
+  .styled-list li {
+    padding: 10px 0 10px 0;
+    padding-right: 28px;
+    position: relative;
+    border-bottom: 1px solid #f0ece4;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .styled-list li::before {
+    content: '◆';
+    position: absolute;
+    right: 0;
+    color: var(--accent);
+    font-size: 0.7rem;
+    top: 14px;
+  }
+
+  /* ===== EXECUTION PLAN ===== */
+  .exec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 24px 0;
+  }
+
+  .exec-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .exec-card-header {
+    background: var(--primary);
+    color: white;
+    padding: 16px 20px;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .exec-card-body {
+    padding: 20px;
+  }
+
+  .exec-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0ece4;
+    font-size: 0.88rem;
+  }
+
+  .exec-row:last-child { border-bottom: none; }
+
+  .exec-label { color: var(--text-muted); font-weight: 500; }
+  .exec-value { color: var(--primary); font-weight: 700; }
+
+  /* ===== COMPARISON TABLE ===== */
+  .comparison-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    margin: 24px 0;
+  }
+
+  .comparison-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    padding: 20px 24px;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  /* ===== CONCLUSION ===== */
+  .conclusion-section {
+    background: linear-gradient(135deg, #0d2137, #1a3a5c);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+  }
+
+  .conclusion-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .conclusion-content h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: var(--accent);
+  }
+
+  .conclusion-content p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 20px;
+  }
+
+  .conclusion-quote {
+    background: rgba(200,169,110,0.15);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-lg);
+    padding: 30px 40px;
+    margin: 40px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent);
+    font-family: 'Amiri', serif;
+    line-height: 1.8;
+  }
+
+  /* ===== REFERENCES ===== */
+  .references-section {
+    background: var(--bg-white);
+    padding: 60px 20px;
+  }
+
+  .ref-list {
+    list-style: none;
+    counter-reset: ref-counter;
+  }
+
+  .ref-list li {
+    counter-increment: ref-counter;
+    padding: 10px 0 10px 0;
+    padding-right: 40px;
+    position: relative;
+    border-bottom: 1px solid #f0ece4;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .ref-list li::before {
+    content: counter(ref-counter);
+    position: absolute;
+    right: 0;
+    top: 10px;
+    background: var(--primary);
+    color: white;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #0a1a2a;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.85rem;
+  }
+
+  footer strong { color: var(--accent); }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 768px) {
+    .nav-menu { display: none; }
+    .nav-menu.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      left: 0;
+      background: var(--primary);
+      padding: 16px;
+      gap: 8px;
+      z-index: 999;
+    }
+    .hamburger { display: flex; }
+
+    .author-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .author-photo {
+      width: 120px;
+      height: 120px;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero { padding: 50px 16px 40px; }
+
+    .section { padding: 40px 0; }
+
+    .key-numbers {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .exec-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .toc-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .conclusion-quote {
+      padding: 20px 24px;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .key-numbers { grid-template-columns: 1fr 1fr; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+  }
+
+  /* ===== SCROLL TO TOP ===== */
+  .scroll-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 46px;
+    height: 46px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    z-index: 999;
+  }
+
+  .scroll-top:hover { background: var(--accent); color: var(--primary); }
+  .scroll-top.visible { display: flex; }
+
+  /* ===== PATH COMPARISON ===== */
+  .path-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 30px 0;
+  }
+
+  .path-card {
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    text-align: center;
+  }
+
+  .path-card.current {
+    background: #fff0f0;
+    border: 2px solid #e57373;
+  }
+
+  .path-card.alternative {
+    background: #f0fff4;
+    border: 2px solid #66bb6a;
+  }
+
+  .path-card h4 {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+
+  .path-card.current h4 { color: #c62828; }
+  .path-card.alternative h4 { color: #2e7d32; }
+
+  .path-card ul {
+    list-style: none;
+    text-align: right;
+    font-size: 0.88rem;
+    line-height: 2;
+    color: #1a1a2e;
+  }
+
+  .path-card.current ul li { color: #5a0000; }
+  .path-card.alternative ul li { color: #003300; }
+
+  .path-card.current ul li::before { content: '✗ '; color: #e57373; }
+  .path-card.alternative ul li::before { content: '✓ '; color: #66bb6a; }
+
+  @media (max-width: 600px) {
+    .path-comparison { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#top" class="nav-logo">خطة مصر الاقتصادية</a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#diagnosis">التشخيص</a></li>
+      <li><a href="#spending">الإنفاق</a></li>
+      <li><a href="#agriculture">الزراعة</a></li>
+      <li><a href="#industry">الصناعة</a></li>
+      <li><a href="#energy">الطاقة</a></li>
+      <li><a href="#fintech">التكنولوجيا المالية</a></li>
+      <li><a href="#innovation">الابتكار</a></li>
+      <li><a href="#marine">الثروة السمكية</a></li>
+      <li><a href="#crossborder">عابر الحدود</a></li>
+      <li><a href="#tourism">السياحة</a></li>
+      <li><a href="#execution">التنفيذ</a></li>
+      <li><a href="#model">النموذج المالي</a></li>
+      <li><a href="#logistics">اللوجستيات</a></li>
+      <li><a href="#mining">التعدين</a></li>
+      <li><a href="#conclusion">الخلاصة</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-content">
+    <div class="hero-badge">دراسة اقتصادية مؤسسية — أبريل 2026</div>
+    <h1>خطة اقتصادية <span>بديلة لمصر</span></h1>
+    <p class="hero-subtitle">نموذج عملي لإعادة بناء الاقتصاد والتكامل العابر للحدود وتوجيه رأس المال</p>
+
+    <div class="hero-buttons">
+      <a href="#diagnosis" class="btn btn-primary">📖 قراءة الدراسة كاملة</a>
+      <a href="Egypt_Economic_Blueprint_Arabic.docx" class="btn btn-outline" download>⬇ تحميل الدراسة PDF</a>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-number">289%</span>
+        <div class="stat-label">ارتفاع الدين الخارجي خلال عقد</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">$168B</span>
+        <div class="stat-label">إجمالي الدين الخارجي 2023</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">$250-310B</span>
+        <div class="stat-label">التأثير التراكمي للبديل (10 سنوات)</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">$80B+</span>
+        <div class="stat-label">أُنفقت على مشروعات غير إنتاجية</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHOR -->
+<section class="author-section">
+  <div class="author-container">
+    <img src="author.png" alt="طارق ثروت يوسف" class="author-photo">
+    <div class="author-info">
+      <h2>طارق ثروت يوسف</h2>
+      <div class="author-title">خبير اقتصادي | الرئيس التنفيذي — أوشن بيرل سي فود إنترناشيونال</div>
+      <p class="author-bio">
+        يمتلك طارق ثروت يوسف أكثر من 20 عاماً من الخبرة في تطوير الأعمال الاقتصادية عبر قطاعات متعددة، تشمل المأكولات البحرية والزراعة والصناعة الغذائية والتجارة الدولية. يُدير شركة أوشن بيرل سي فود إنترناشيونال، إحدى الشركات الرائدة في قطاع المأكولات البحرية من الصيد حتى التصدير والتوزيع. تستند هذه الدراسة إلى خبرته الميدانية العميقة في الاقتصادات الناشئة وتحليله الدقيق لمسارات التنمية الاقتصادية المقارنة.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<section class="toc-section">
+  <div class="toc-container">
+    <h2 class="section-title" style="color:white;">فهرس المحتويات</h2>
+    <div class="toc-grid">
+      <a href="#diagnosis" class="toc-item"><span class="toc-num">1</span> تشخيص الاقتصاد المصري</a>
+      <a href="#spending" class="toc-item"><span class="toc-num">2</span> تحليل الإنفاق وسوء التخصيص</a>
+      <a href="#agriculture" class="toc-item"><span class="toc-num">3</span> الزراعة والغذاء: محرك النمو</a>
+      <a href="#industry" class="toc-item"><span class="toc-num">4</span> الصناعة: بناء القدرة التصديرية</a>
+      <a href="#energy" class="toc-item"><span class="toc-num">5</span> الطاقة: التحول نحو المتجددة</a>
+      <a href="#fintech" class="toc-item"><span class="toc-num">6</span> التكنولوجيا المالية: محرك الإنتاجية</a>
+      <a href="#innovation" class="toc-item"><span class="toc-num">7</span> البحث العلمي والابتكار</a>
+      <a href="#marine" class="toc-item"><span class="toc-num">8</span> الثروة السمكية والمشروعات البحرية</a>
+      <a href="#crossborder" class="toc-item"><span class="toc-num">9</span> المشروعات العابرة للحدود</a>
+      <a href="#tourism" class="toc-item"><span class="toc-num">10</span> السياحة واللوجستيات</a>
+      <a href="#execution" class="toc-item"><span class="toc-num">11</span> خطة التنفيذ الوطنية</a>
+      <a href="#model" class="toc-item"><span class="toc-num">12</span> النموذج المالي التراكمي</a>
+      <a href="#logistics" class="toc-item"><span class="toc-num">13</span> محور قناة السويس واللوجستيات</a>
+      <a href="#mining" class="toc-item"><span class="toc-num">14</span> الثروة المعدنية والموارد الطبيعية</a>
+      <a href="#conclusion" class="toc-item"><span class="toc-num">15</span> الخلاصة والتوصيات</a>
+
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+  <!-- SECTION 1: DIAGNOSIS -->
+  <section class="section" id="intro-author" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: #fff; border-right: 6px solid #c9a227;">
+  <div style="max-width: 900px; margin: 0 auto; padding: 20px;">
+    <h2 style="color: #c9a227; font-size: 2rem; margin-bottom: 20px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">مقدمة المؤلف: غضبٌ من أجل مصر، ورؤية للنهوض</h2>
+    
+    <p style="font-size: 1.15rem; line-height: 2; color: #e8e8e8; margin-bottom: 20px;">
+      لم تُكتب هذه الدراسة من فراغ أكاديمي بارد، بل كُتبت من رحم <strong style="color: #c9a227;">غضبٍ وطني أصيل</strong>. غضبٌ يعتصرني كلما قرأت أو سمعت من يقلل من شأن مصر، أو يصفها بالفقر، أو يروج لثقافة العجز والاعتماد على الغير. لقد رأيت كيف يكتب بعضهم عن مصر وكأنها دولة بلا تاريخ ولا مستقبل، وكيف يقبل آخرون بهذه الصورة المشوهة ويرددونها دون تمحيص. هذا الغضب هو الذي دفعني إلى كتابة هذه الخطة الاقتصادية الشاملة.
+    </p>
+    
+    <p style="font-size: 1.15rem; line-height: 2; color: #e8e8e8; margin-bottom: 30px;">
+      قررت أن أثبت بالدليل القاطع والأرقام المجردة أن <strong style="color: #c9a227;">إفشال ثورة يناير قد أضاع على مصر فرصاً تاريخية استثنائية للنهوض</strong>، وأن ما نعيشه اليوم من أزمات اقتصادية طاحنة ليس قدراً محتوماً، بل هو نتيجة مباشرة لسوء إدارة الموارد وتوجيه رأس المال نحو مشروعات استعراضية لا تدر عائداً حقيقياً، بينما تُهمل القطاعات الإنتاجية الحقيقية.
+    </p>
+    
+    <div style="background: rgba(201, 162, 39, 0.15); border: 1px solid #c9a227; border-radius: 12px; padding: 25px; margin: 30px 0;">
+      <h3 style="color: #c9a227; font-size: 1.5rem; margin-bottom: 15px;">🏛️ مصر في ميزان التاريخ: عمق لا يُدرك</h3>
+      <p style="font-size: 1.1rem; line-height: 2; color: #e8e8e8;">
+        إن من يقرأ تاريخ مصر جيداً يدرك حقيقة مذهلة: <strong style="color: #fff;">المسافة الزمنية بيننا اليوم وبين إمبراطورية مصر القديمة في عصر الملوك المحاربين العظام في الأسرات الثامنة عشرة والتاسعة عشرة والعشرين</strong> — عصر تحتمس وسيتي ورمسيس — ليست أكبر من المسافة الزمنية التي كانت تفصل هؤلاء الملوك أنفسهم عن أجدادهم الأوائل <strong style="color: #fff;">بناة الأهرام</strong>. نحن نتحدث عن حضارة تمتد لأكثر من سبعة آلاف سنة متواصلة من الإنجاز والبناء والابتكار.
+      </p>
+      <p style="font-size: 1.1rem; line-height: 2; color: #e8e8e8; margin-top: 15px;">
+        هذا العمق الحضاري الهائل يجعل من فترة الاضمحلال والتراجع التي نمر بها اليوم مجرد <strong style="color: #c9a227;">نقطة عابرة في بحر عمر مصر الممتد</strong>. لقد علمنا التاريخ أن مصر دائماً ما كانت تمر بفترات كبوة وانحسار، ثم يأتي من يغير كل الواقع في فترة وجيزة، لينهض بها من جديد كطائر الفينيق. من الدولة الوسطى التي نهضت بعد الفوضى، إلى محمد علي الذي حوّل مصر في عقود قليلة إلى قوة صناعية وعسكرية — <strong style="color: #c9a227;">مصر لا تموت، مصر تنتظر.</strong>
+      </p>
+    </div>
+    
+    <div style="background: rgba(0, 128, 0, 0.15); border: 1px solid #4caf50; border-radius: 12px; padding: 25px; margin: 30px 0;">
+      <h3 style="color: #4caf50; font-size: 1.5rem; margin-bottom: 15px;">🚀 هذه الدراسة: دليل على أن النهوض ممكن الآن</h3>
+      <p style="font-size: 1.1rem; line-height: 2; color: #e8e8e8;">
+        هذه الدراسة ليست مجرد نقد للواقع، بل هي <strong style="color: #4caf50;">صرخة إيقاظ ودليل عملي مُحكم</strong> يثبت بالأرقام والنماذج المقارنة أن النهوض ممكن الآن، وبسرعة، إذا ما امتلكنا الإرادة السياسية والرؤية الاقتصادية الصحيحة. مصر غنية بمواردها الطبيعية، بشبابها المتعلم، بموقعها الاستراتيجي الفريد الذي تحسده عليه الأمم، وبعقول أبنائها المنتشرين في كل أرجاء العالم.
+      </p>
+      <p style="font-size: 1.1rem; line-height: 2; color: #e8e8e8; margin-top: 15px;">
+        ما نحتاجه اليوم ليس مزيداً من القروض أو المشروعات الاستعراضية التي تُثقل كاهل الأجيال القادمة بالديون، بل نحتاج إلى <strong style="color: #4caf50;">'ثورة إنتاجية' حقيقية</strong> تعيد توجيه بوصلة الاقتصاد نحو الزراعة الذكية والصناعة التصديرية والتكنولوجيا المالية. ما يفصلنا عن هذا المستقبل ليس الموارد ولا القدرات، <strong style="color: #c9a227;">بل هو القرار.</strong>
+      </p>
+    </div>
+    
+    <blockquote style="border-right: 4px solid #c9a227; padding: 15px 20px; margin: 30px 0; background: rgba(201,162,39,0.1); border-radius: 0 8px 8px 0; font-size: 1.2rem; font-style: italic; color: #c9a227; font-weight: bold; text-align: center;">
+      "مصر ليست فقيرة، مصر مُستنزَفة. والفرق بين الاثنين هو الفرق بين المريض والميت. والمريض يُشفى."
+    </blockquote>
+  </div>
+</section>
+
+<section class="section" id="diagnosis">
+    <div class="section-header">
+      <div class="section-icon">🔍</div>
+      <h2>1. تشخيص الاقتصاد المصري (2012–2024)</h2>
+    </div>
+
+    <p>إن الأزمة الاقتصادية التي واجهتها مصر خلال العقد الماضي لم تكن نتيجة حتمية للصدمات العالمية فحسب، بل كانت نتاجاً مباشراً لسياسات التخصيص الخاطئ لرأس المال وترتيب الأولويات التنموية. فرغم أن العوامل الخارجية مثل جائحة كورونا، والتضخم العالمي، والتوترات الجيوسياسية، واضطرابات البحر الأحمر قد فاقمت الوضع، إلا أن الهشاشة الهيكلية تم بناؤها بشكل منهجي عبر عقد من الزمن.</p>
+
+    <p>توضح هذه الدراسة أنه لو تم توجيه رأس المال بشكل صحيح، لكانت مصر تمتلك هوامش الأمان الهيكلية من النقد الأجنبي اللازمة لامتصاص الصدمات الخارجية دون اللجوء إلى تخفيضات حادة في قيمة العملة أو حزم إنقاذ من صندوق النقد الدولي.</p>
+
+    <div class="highlight-box">
+      <strong>⚠ ملاحظة بيانات موثقة:</strong>
+      <p>ارتفع الدين الخارجي من حوالي 43.2 مليار دولار في عام 2013 إلى ذروة بلغت 168.03 مليار دولار في الربع الرابع من عام 2023، بزيادة قدرها 289% خلال عقد واحد. هذا التراكم في الديون كان مدفوعاً بشكل أساسي بتمويل مشروعات بنية تحتية لا تدر عوائد دولارية على المدى القصير إلى المتوسط. (المصدر: البنك المركزي المصري، بيانات البنك الدولي)</p>
+    </div>
+
+    <div class="key-numbers">
+      <div class="key-number-card">
+        <span class="number">$43.2B</span>
+        <div class="label">الدين الخارجي 2013</div>
+      </div>
+      <div class="key-number-card">
+        <span class="number accent">$168B</span>
+        <div class="label">الدين الخارجي 2023</div>
+      </div>
+      <div class="key-number-card">
+        <span class="number">289%</span>
+        <div class="label">نسبة الزيادة في عقد</div>
+      </div>
+      <div class="key-number-card">
+        <span class="number success">$155B</span>
+        <div class="label">الدين الخارجي Q4 2024</div>
+      </div>
+    </div>
+
+    <h3>المؤشرات الاقتصادية الكلية الرئيسية</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>المؤشر</th>
+            <th>2013</th>
+            <th>2019</th>
+            <th>2023</th>
+            <th>الملاحظة</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>الدين الخارجي (مليار دولار)</td>
+            <td>43.2</td>
+            <td>108.7</td>
+            <td>168.0</td>
+            <td>ارتفاع بنسبة 289%</td>
+          </tr>
+          <tr>
+            <td>الدين الحكومي (% من الناتج المحلي)</td>
+            <td>~85%</td>
+            <td>~90%</td>
+            <td>~97%</td>
+            <td>تجاوز عتبة الخطر</td>
+          </tr>
+          <tr>
+            <td>عجز الحساب الجاري (مليار دولار)</td>
+            <td>-6.5</td>
+            <td>-11.2</td>
+            <td>-15.8</td>
+            <td>تدهور مستمر</td>
+          </tr>
+          <tr>
+            <td>إيرادات قناة السويس (مليار دولار)</td>
+            <td>5.1</td>
+            <td>5.8</td>
+            <td>9.4</td>
+            <td>تراجع بسبب اضطرابات البحر الأحمر</td>
+          </tr>
+          <tr>
+            <td>التضخم (%)</td>
+            <td>~9%</td>
+            <td>~9%</td>
+            <td>~33%</td>
+            <td>أزمة حادة</td>
+          </tr>
+          <tr>
+            <td><strong>الإجمالي / الخلاصة</strong></td>
+            <td colspan="3"><strong>تدهور هيكلي ممنهج</strong></td>
+            <td><strong>يستدعي إعادة هيكلة جذرية</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SECTION 2: SPENDING -->
+  <section class="section" id="spending">
+    <div class="section-header">
+      <div class="section-icon">💰</div>
+      <h2>2. تحليل الإنفاق: سوء تخصيص رأس المال</h2>
+    </div>
+
+    <p>يكمن جوهر الأزمة الاقتصادية في مصر في حملة البنية التحتية القوية الممولة بالديون والتي بدأت في الفترة 2014-2016. ورغم أن الاستثمار في البنية التحتية ضروري للنمو طويل الأجل، إلا أن تسلسل وحجم وتكوين الإنفاق المصري أدى إلى مزاحمة الاستثمارات الإنتاجية وخلق عجزاً هيكلياً في النقد الأجنبي.</p>
+
+    <div class="highlight-box">
+      <strong>⚠ الحقيقة الجوهرية:</strong>
+      <p>تم تخصيص أكثر من 80 مليار دولار لمشروعات النقل والمدن الكبرى (العاصمة الإدارية الجديدة ~58 مليار دولار، المونوريل ~5.5 مليار دولار، القطار السريع ~8.7 مليار دولار) مع الحد الأدنى من توليد الصادرات أو العوائد المباشرة من النقد الأجنبي على المدى القصير إلى المتوسط.</p>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>المشروع</th>
+            <th>التكلفة التقديرية</th>
+            <th>توليد النقد الأجنبي</th>
+            <th>نموذج التمويل</th>
+            <th>التقييم</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>العاصمة الإدارية الجديدة</td>
+            <td>~58 مليار دولار</td>
+            <td>منخفض جداً (قصير المدى)</td>
+            <td>ديون + حكومي</td>
+            <td>⚠ مخاطر عالية</td>
+          </tr>
+          <tr>
+            <td>القطار السريع (1000 كم)</td>
+            <td>~8.7 مليار دولار</td>
+            <td>غير مباشر</td>
+            <td>ديون خارجية</td>
+            <td>⚠ طويل الأمد</td>
+          </tr>
+          <tr>
+            <td>مونوريل القاهرة الكبرى</td>
+            <td>~5.5 مليار دولار</td>
+            <td>لا يوجد</td>
+            <td>ديون خارجية</td>
+            <td>⚠ عبء مالي</td>
+          </tr>
+          <tr>
+            <td>توسعة قناة السويس</td>
+            <td>~8.5 مليار دولار</td>
+            <td>متوسط (تحسّن الإيرادات)</td>
+            <td>شهادات محلية</td>
+            <td>✓ مبرر نسبياً</td>
+          </tr>
+          <tr>
+            <td>مشروعات الطاقة (بعضها)</td>
+            <td>~15 مليار دولار</td>
+            <td>متوسط إلى مرتفع</td>
+            <td>مختلط</td>
+            <td>✓ إنتاجي</td>
+          </tr>
+          <tr>
+            <td><strong>الإجمالي (المشروعات الكبرى)</strong></td>
+            <td><strong>>80 مليار دولار</strong></td>
+            <td><strong>منخفض في المتوسط</strong></td>
+            <td><strong>ديون بالأساس</strong></td>
+            <td><strong>⚠ سوء تخصيص</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>ماذا كان يمكن أن يحدث لو أُعيد توجيه 30% فقط من هذا الإنفاق؟</h3>
+    <p>إعادة توجيه 24-30 مليار دولار فقط (30% من الإنفاق على المشروعات الكبرى) نحو القطاعات الإنتاجية كان يمكن أن يولد تأثيراً تراكمياً من النقد الأجنبي يتراوح بين 250-310 مليار دولار على مدى عشر سنوات — وهو ما يعادل إجمالي الدين الخارجي الحالي.</p>
+  </section>
+
+  <!-- SECTION 3: AGRICULTURE -->
+  <section class="section" id="agriculture">
+    <div class="section-header">
+      <div class="section-icon">🌾</div>
+      <h2>3. الزراعة والغذاء: نموذج سلسلة القيمة الكاملة</h2>
+    </div>
+
+    <p>يتطلب القطاع الزراعي تحولاً جذرياً من مجرد الإنتاج إلى نموذج متكامل لسلسلة القيمة: <strong>الإنتاج ← التخزين ← المعالجة ← التصدير</strong>. يكمن عنق الزجاجة الحرج في نقص سعة التبريد (سلسلة التبريد) بحوالي 2-3 مليون طن، مما يؤدي إلى خسائر ما بعد الحصاد تتراوح بين 20-40% حسب نوع المحصول.</p>
+
+    <h3>المشروعات المحددة المقترحة</h3>
+    <div class="exec-grid">
+      <div class="exec-card">
+        <div class="exec-card-header">❄ شبكة سلسلة التبريد</div>
+        <div class="exec-card-body">
+          <div class="exec-row"><span class="exec-label">المشروع</span><span class="exec-value">10 مراكز إقليمية (100 ألف طن/مركز)</span></div>
+          <div class="exec-row"><span class="exec-label">التكلفة</span><span class="exec-value">800 مليون دولار</span></div>
+          <div class="exec-row"><span class="exec-label">الجدول الزمني</span><span class="exec-value">السنتان 1-2</span></div>
+          <div class="exec-row"><span class="exec-label">نموذج التنفيذ</span><span class="exec-value">شراكة عام-خاص (PPP)</span></div>
+          <div class="exec-row"><span class="exec-label">العائد المتوقع</span><span class="exec-value">تقليل خسائر الحصاد 15%</span></div>
+        </div>
+      </div>
+      <div class="exec-card">
+        <div class="exec-card-header">🏗 صوامع حديثة</div>
+        <div class="exec-card-body">
+          <div class="exec-row"><span class="exec-label">المشروع</span><span class="exec-value">سعة 3 ملايين طن إضافية</span></div>
+          <div class="exec-row"><span class="exec-label">التكلفة</span><span class="exec-value">600 مليون دولار</span></div>
+          <div class="exec-row"><span class="exec-label">الجدول الزمني</span><span class="exec-value">السنوات 1-3</span></div>
+          <div class="exec-row"><span class="exec-label">نموذج التنفيذ</span><span class="exec-value">حكومي</span></div>
+          <div class="exec-row"><span class="exec-label">العائد المتوقع</span><span class="exec-value">تقليل هدر الحبوب 20-25%</span></div>
+        </div>
+      </div>
+      <div class="exec-card">
+        <div class="exec-card-header">🏭 مناطق التصنيع الزراعي</div>
+        <div class="exec-card-body">
+          <div class="exec-row"><span class="exec-label">المشروع</span><span class="exec-value">3-4 مجمعات متخصصة</span></div>
+          <div class="exec-row"><span class="exec-label">التكلفة</span><span class="exec-value">400 مليون دولار</span></div>
+          <div class="exec-row"><span class="exec-label">الجدول الزمني</span><span class="exec-value">السنوات 2-4</span></div>
+          <div class="exec-row"><span class="exec-label">نموذج التنفيذ</span><span class="exec-value">القطاع الخاص</span></div>
+          <div class="exec-row"><span class="exec-label">العائد المتوقع</span><span class="exec-value">مضاعفة قيمة الصادرات المعالجة</span></div>
+        </div>
+      </div>
+      <div class="exec-card">
+        <div class="exec-card-header">🚢 مراكز لوجستيات التصدير</div>
+        <div class="exec-card-body">
+          <div class="exec-row"><span class="exec-label">المشروع</span><span class="exec-value">مركزان متخصصان للمنتجات القابلة للتلف</span></div>
+          <div class="exec-row"><span class="exec-label">التكلفة</span><span class="exec-value">200 مليون دولار</span></div>
+          <div class="exec-row"><span class="exec-label">الجدول الزمني</span><span class="exec-value">السنوات 3-5</span></div>
+          <div class="exec-row"><span class="exec-label">نموذج التنفيذ</span><span class="exec-value">شراكة عام-خاص (PPP)</span></div>
+          <div class="exec-row"><span class="exec-label">العائد المتوقع</span><span class="exec-value">فتح أسواق أوروبية وخليجية جديدة</span></div>
+        </div>
+      </div>
+    </div>
+
+    <h3>مقارنة دولية: أين تقف مصر؟</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>الدولة</th>
+            <th>صادرات الغذاء والزراعة</th>
+            <th>نسبة المنتجات المعالجة</th>
+            <th>الدرس المستفاد</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🇪🇬 مصر</td>
+            <td>3.5-4.0 مليار دولار</td>
+            <td>أقل من 20%</td>
+            <td>إمكانات ضخمة غير مستغلة</td>
+          </tr>
+          <tr>
+            <td>🇲🇦 المغرب</td>
+            <td>7.0-8.0 مليار دولار</td>
+            <td>35-40%</td>
+            <td>استثمار في التصنيع الزراعي</td>
+          </tr>
+          <tr>
+            <td>🇹🇷 تركيا</td>
+            <td>20-25 مليار دولار</td>
+            <td>55-60%</td>
+            <td>سلسلة قيمة متكاملة</td>
+          </tr>
+          <tr>
+            <td>🇻🇳 فيتنام</td>
+            <td>40-50 مليار دولار</td>
+            <td>65-70%</td>
+            <td>تحول كامل نحو التصدير</td>
+          </tr>
+          <tr>
+            <td><strong>هدف مصر (السنة 10)</strong></td>
+            <td><strong>8-10 مليار دولار</strong></td>
+            <td><strong>40-50%</strong></td>
+            <td><strong>قابل للتحقيق بالاستثمار الصحيح</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>سيناريوهات توليد النقد الأجنبي (السنة الخامسة)</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>المصدر</th>
+            <th>الوضع الحالي</th>
+            <th>السنة 3</th>
+            <th>السنة 5</th>
+            <th>السنة 10</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>تعويض الاستيراد (قمح)</td>
+            <td>صفر</td>
+            <td>+0.3 مليار</td>
+            <td>+0.5-0.8 مليار</td>
+            <td>+1.0 مليار</td>
+          </tr>
+          <tr>
+            <td>تقليل خسائر ما بعد الحصاد</td>
+            <td>خسارة 2.5-3.5 مليار</td>
+            <td>+0.5 مليار</td>
+            <td>+1.0-1.5 مليار</td>
+            <td>+1.5 مليار</td>
+          </tr>
+          <tr>
+            <td>نمو الصادرات المعالجة</td>
+            <td>أقل من 20% معالجة</td>
+            <td>+0.8 مليار</td>
+            <td>+2.5-3.5 مليار</td>
+            <td>+4.0 مليار</td>
+          </tr>
+          <tr>
+            <td>اختراق أسواق جديدة</td>
+            <td>محدود</td>
+            <td>+0.2 مليار</td>
+            <td>+1.0-1.2 مليار</td>
+            <td>+2.0 مليار</td>
+          </tr>
+          <tr>
+            <td><strong>الإجمالي</strong></td>
+            <td><strong>—</strong></td>
+            <td><strong>+1.8 مليار</strong></td>
+            <td><strong>+5.0-7.0 مليار</strong></td>
+            <td><strong>+8.5 مليار</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SECTION 4: INDUSTRY -->
+  <section class="section" id="industry">
+    <div class="section-header">
+      <div class="section-icon">🏭</div>
+      <h2>4. الصناعة: بناء القدرة التصديرية</h2>
+    </div>
+
+    <p>عانت القطاعات الإنتاجية من نقص مزمن في الاستثمار، مما أدى إلى عجز تجاري هيكلي وزيادة الاعتماد على الواردات. يجب توجيه الاستثمارات نحو الصناعات ذات القيمة المضافة العالية التي يمكنها المنافسة في الأسواق العالمية.</p>
+
+    <h3>الفجوة التصديرية الصناعية</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>المؤشر</th>
+            <th>مصر</th>
+            <th>المغرب</th>
+            <th>تركيا</th>
+            <th>إندونيسيا</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>الصادرات الصناعية للفرد (دولار)</td>
+            <td>~120</td>
+            <td>~350</td>
+            <td>~1,200</td>
+            <td>~600</td>
+          </tr>
+          <tr>
+            <td>نسبة الصادرات من الناتج المحلي (%)</td>
+            <td>~12%</td>
+            <td>~28%</td>
+            <td>~25%</td>
+            <td>~22%</td>
+          </tr>
+          <tr>
+            <td>نسبة المنتجات ذات القيمة المضافة (%)</td>
+            <td>~30%</td>
+            <td>~45%</td>
+            <td>~65%</td>
+            <td>~55%</td>
+          </tr>
+          <tr>
+            <td><strong>هدف مصر (السنة 10)</strong></td>
+            <td><strong>~600</strong></td>
+            <td colspan="3"><strong>قابل للتحقيق بالاستثمار الصحيح</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>خطة التنفيذ الصناعية</h3>
+    <ul class="styled-list">
+      <li><strong>صندوق ضمان ائتمان الصادرات للشركات الصغيرة والمتوسطة:</strong> 2 مليار دولار — السنة الأولى — البنك المركزي المصري — العائد: تمكين 50,000 شركة من الوصول إلى الأسواق الدولية</li>
+      <li><strong>تحديث المناطق الصناعية:</strong> 1.5 مليار دولار — السنوات 1-3 — حكومي — العائد: رفع الإنتاجية بنسبة 30-40%</li>
+      <li><strong>برنامج نقل التكنولوجيا:</strong> 500 مليون دولار — السنوات 2-4 — شراكة عام-خاص — العائد: رفع جودة المنتجات للمعايير الدولية</li>
+      <li><strong>منطقتا تصدير متخصصتان:</strong> 1 مليار دولار — السنوات 3-5 — القطاع الخاص — العائد: استقطاب استثمارات أجنبية مباشرة</li>
+    </ul>
+
+    <div class="info-box">
+      <strong>💡 فرصة المزايا التنافسية:</strong>
+      <p>تمتلك مصر مزايا تنافسية غير مستغلة في تحويل المواد الخام إلى منتجات ذات قيمة مضافة عالية: الرمال السيليكية إلى زجاج تقني، القطن الخام إلى منسوجات تقنية، الرخام إلى منتجات معمارية راقية. هذه الفرص يمكن أن تضاعف قيمة الصادرات 3-5 مرات دون الحاجة إلى موارد طبيعية إضافية.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 5: ENERGY -->
+  <section class="section" id="energy">
+    <div class="section-header">
+      <div class="section-icon">⚡</div>
+      <h2>5. الطاقة: التحول نحو المصادر المتجددة</h2>
+    </div>
+
+    <p>رغم اكتشاف حقل ظهر للغاز في عام 2015، تراجع إنتاج الطاقة المحلي بسبب تقادم البنية التحتية ونقص الاستثمار وزيادة الاستهلاك المحلي. ونتيجة لذلك، تحولت مصر من مصدر للغاز الطبيعي المسال إلى مستورد صافٍ، حيث تقدر واردات الغاز الطبيعي المسال لعام 2024-2025 بحوالي 8-10 مليارات دولار سنوياً.</p>
+
+    <div class="highlight-box">
+      <strong>⚠ ملاحظة جوهرية:</strong>
+      <p>يمثل عبء استيراد الطاقة استنزافاً كبيراً للنقد الأجنبي كان يمكن تجنبه من خلال الاستثمار في الوقت المناسب في البنية التحتية للطاقة المتجددة. إن استثمار 5 مليارات دولار في قدرات الطاقة الشمسية على نطاق المرافق يمكن أن يوفر بشكل متحفظ 2-3 مليارات دولار سنوياً من واردات الغاز الطبيعي المسال.</p>
+    </div>
+
+    <div class="key-numbers">
+      <div class="key-number-card">
+        <span class="number accent">$8-10B</span>
+        <div class="label">واردات الغاز الطبيعي المسال السنوية 2024-2025</div>
+      </div>
+      <div class="key-number-card">
+        <span class="number">3-4 GW</span>
+        <div class="label">القدرة المتجددة الحالية</div>
+      </div>
+      <div class="key-number-card">
+        <span class="number success">10-15 GW</span>
+        <div class="label">الهدف خلال 5 سنوات</div>
+      </div>
+      <div class="key-number-card">
+        <span class="number">$5-7B</span>
+        <div class="label">وفورات سنوية متوقعة (السنة 10)</div>
+      </div>
+    </div>
+
+    <h3>خطة التنفيذ في قطاع الطاقة</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>المشروع</th>
+            <th>التكلفة</th>
+            <th>الجدول الزمني</th>
+            <th>العائد السنوي</th>
+            <th>نموذج التنفيذ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5 GW طاقة شمسية على نطاق المرافق</td>
+            <td>3 مليار دولار</td>
+            <td>السنوات 1-3</td>
+            <td>توفير 1.5-2 مليار دولار</td>
+            <td>شراكة عام-خاص</td>
+          </tr>
+          <tr>
+            <td>3 GW طاقة رياح (ساحلية)</td>
+            <td>2 مليار دولار</td>
+            <td>السنوات 2-4</td>
+            <td>توفير 1-1.5 مليار دولار</td>
+            <td>قطاع خاص</td>
+          </tr>
+          <tr>
+            <td>شبكات نقل ذكية</td>
+            <td>1.5 مليار دولار</td>
+            <td>السنوات 3-5</td>
+            <td>رفع كفاءة الشبكة 20%</td>
+            <td>حكومي</td>
+          </tr>
+          <tr>
+            <td>تصدير فائض الطاقة لأوروبا</td>
+            <td>500 مليون دولار (ربط)</td>
+            <td>السنوات 4-7</td>
+            <td>1-2 مليار دولار صادرات</td>
+            <td>شراكة دولية</td>
+          </tr>
+          <tr>
+            <td><strong>الإجمالي</strong></td>
+            <td><strong>7 مليار دولار</strong></td>
+            <td><strong>7 سنوات</strong></td>
+            <td><strong>5-7 مليار دولار/سنة</strong></td>
+            <td><strong>مختلط</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SECTION 6: FINTECH -->
+  <section class="section" id="fintech">
+    <div class="section-header">
+      <div class="section-icon">📱</div>
+      <h2>6. التكنولوجيا المالية: محرك الإنتاجية الاقتصادية</h2>
+    </div>
+
+    <p>التكنولوجيا المالية ليست مجرد وسيلة للراحة؛ بل هي <strong>محرك رئيسي للإنتاجية الاقتصادية</strong>. إن تعميق انتشار التكنولوجيا المالية أمر بالغ الأهمية لزيادة سرعة دوران الاقتصاد، وتقليل التسرب المالي، وإضفاء الطابع الرسمي على الاقتصاد غير الرسمي.</p>
+
+    <h3>التكلفة الكمية لعدم كفاءة النقد</h3>
+    <div class="key-numbers">
+      <div class="key-number-card">
+        <span class="number accent">$5-7B</span>
+        <div class="label">التكلفة السنوية لإدارة النقد (1.5-2% من الناتج المحلي)</div>
+      </div>
+      <div class="key-number-card">
+        <span class="number">15-20 ثانية</span>
+        <div class="label">وقت إضافي لكل معاملة نقدية في النقل العام</div>
+      </div>
+      <div class="key-number-card">
+        <span class="number accent">20-30%</span>
+        <div class="label">تسرب في الإيرادات بسبب المدفوعات النقدية غير الرسمية</div>
+      </div>
+      <div class="key-number-card">
+        <span class="number success">$300-500M</span>
+        <div class="label">إيرادات إضافية سنوية محتملة من بطاقات النقل الذكية</div>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <strong>📊 الحساب التفصيلي:</strong>
+      <p>بافتراض 20 مليون رحلة يومية في القاهرة الكبرى، وإضافة 15 ثانية لكل معاملة نقدية، فإن ذلك يعني 300 مليون ثانية = 83,000 ساعة عمل مهدرة يومياً = 30 مليون ساعة عمل سنوياً. بمتوسط إنتاجية 5 دولارات/ساعة، فإن الخسارة الاقتصادية تبلغ 150 مليون دولار سنوياً من هذا المصدر وحده.</p>
+    </div>
+
+    <h3>مقارنة دولية: نماذج ناجحة</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>الدولة</th>
+            <th>النظام</th>
+            <th>نسبة المدفوعات الرقمية</th>
+            <th>الأثر الاقتصادي</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🇸🇬 سنغافورة</td>
+            <td>EZ-Link (بطاقة نقل موحدة)</td>
+            <td>95%+</td>
+            <td>توفير 2 مليار دولار سنوياً</td>
+          </tr>
+          <tr>
+            <td>🇲🇾 ماليزيا</td>
+            <td>Touch 'n Go</td>
+            <td>85%+</td>
+            <td>تقليل الاختناقات 40%</td>
+          </tr>
+          <tr>
+            <td>🇮🇩 إندونيسيا</td>
+            <td>GoPay / OVO</td>
+            <td>60%+</td>
+            <td>إضافة 1.5% للناتج المحلي</td>
+          </tr>
+          <tr>
+            <td>🇪🇬 مصر (الحالي)</td>
+            <td>Meeza / InstaPay (محدود)</td>
+            <td>~25%</td>
+            <td>إمكانات ضخمة غير مستغلة</td>
+          </tr>
+          <tr>
+            <td><strong>🇪🇬 مصر (الهدف)</strong></td>
+            <td><strong>بطاقة وطنية موحدة</strong></td>
+            <td><strong>60%+ في 5 سنوات</strong></td>
+            <td><strong>+2-3% للناتج المحلي</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SECTION 7: INNOVATION -->
+  <section class="section" id="innovation">
+    <div class="section-header">
+      <div class="section-icon">🔬</div>
+      <h2>7. البحث العلمي والابتكار: تسويق الحلول المصرية</h2>
+    </div>
+
+    <p>تمتلك مصر قدرات بحثية محلية كبيرة غالباً ما تفشل في الوصول إلى النطاق التجاري. إن سد الفجوة بين الابتكار المعملي والتطبيق في السوق أمر ضروري لإطلاق قيمة اقتصادية هائلة. المشكلة ليست في غياب الابتكار، بل في غياب منظومة التسويق والتمويل والتوسع.</p>
+
+    <h3>أمثلة واقعية وقيمتها الاقتصادية المحتملة</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>الابتكار</th>
+            <th>الوضع الحالي</th>
+            <th>العائق</th>
+            <th>القيمة الاقتصادية إذا تم التوسع</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>أصناف الأرز الموفرة للمياه</td>
+            <td>موجودة في المعامل، غير مُعممة</td>
+            <td>نقص التمويل والتوزيع</td>
+            <td>500-800 مليون دولار/سنة من الصادرات الجديدة + توفير 2-3 مليار م³ مياه</td>
+          </tr>
+          <tr>
+            <td>بدائل وخلطات القمح المحلية</td>
+            <td>أبحاث أكاديمية</td>
+            <td>غياب منظومة التسويق</td>
+            <td>تقليل فاتورة الاستيراد بـ 300-400 مليون دولار/سنة</td>
+          </tr>
+          <tr>
+            <td>تقنيات الري الذكي</td>
+            <td>مشاريع تجريبية محدودة</td>
+            <td>نقص التمويل والتدريب</td>
+            <td>200 مليون دولار صناعة محلية + رفع الإنتاجية 15-20%</td>
+          </tr>
+          <tr>
+            <td>تقنيات تحلية المياه المحلية</td>
+            <td>أبحاث جامعية</td>
+            <td>غياب رأس المال المخاطر</td>
+            <td>صناعة تصدير بـ 500 مليون دولار</td>
+          </tr>
+          <tr>
+            <td>الأدوية والمستحضرات الصيدلانية</td>
+            <td>صناعة محلية قائمة</td>
+            <td>محدودية الصادرات</td>
+            <td>مضاعفة الصادرات إلى 2-3 مليار دولار</td>
+          </tr>
+          <tr>
+            <td><strong>الإجمالي المحتمل</strong></td>
+            <td colspan="2"><strong>مع منظومة تسويق وتمويل مناسبة</strong></td>
+            <td><strong>2-4 مليار دولار إضافية سنوياً</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box">
+      <strong>💡 الحل المقترح: مكاتب نقل التكنولوجيا</strong>
+      <p>إنشاء مكاتب نقل التكنولوجيا في الجامعات الكبرى (القاهرة، الإسكندرية، عين شمس) مرتبطة بصناديق رأس المال المخاطر. الاستثمار المطلوب: 300-500 مليون دولار. العائد المتوقع: تسويق 50-100 اختراع سنوياً، وخلق 10,000-20,000 وظيفة في قطاع التكنولوجيا.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 8: MARINE -->
+  <section class="section" id="marine">
+    <div class="section-header">
+      <div class="section-icon">🐟</div>
+      <h2>8. الثروة السمكية والمشروعات البحرية: استراتيجية الثروة الزرقاء</h2>
+    </div>
+
+    <p>لا يزال الاقتصاد البحري المصري غير مستغل إلى حد كبير. يجب أن تنتقل مصر من الاستزراع المائي للمياه العذبة القائم على الحجم (مثل البلطي) إلى الأنواع البحرية ذات الهامش المرتفع، مستفيدة من سواحلها الممتدة على البحرين الأحمر والمتوسط.</p>
+
+    <h3>الانتقال من الحجم إلى القيمة</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>النوع</th>
+            <th>الوضع الحالي</th>
+            <th>سعر السوق</th>
+            <th>الهدف</th>
+            <th>العائد المحتمل</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>البلطي (مياه عذبة)</td>
+            <td>إنتاج ضخم</td>
+            <td>$2-4/كجم</td>
+            <td>تقليل الاعتماد</td>
+            <td>محدود</td>
+          </tr>
+          <tr>
+            <td>الجمبري البحري</td>
+            <td>محدود</td>
+            <td>$8-15/كجم</td>
+            <td>توسع كبير</td>
+            <td>500 مليون دولار/سنة</td>
+          </tr>
+          <tr>
+            <td>الإستاكوزا (جراد البحر)</td>
+            <td>شبه معدوم</td>
+            <td>$30-80/كجم</td>
+            <td>استزراع بحري متحكم</td>
+            <td>300-500 مليون دولار/سنة</td>
+          </tr>
+          <tr>
+            <td>خيار البحر</td>
+            <td>معدوم</td>
+            <td>$50-200/كجم (جاف)</td>
+            <td>استهداف السوق الآسيوي</td>
+            <td>200-400 مليون دولار/سنة</td>
+          </tr>
+          <tr>
+            <td>التونة المجمدة بالنيتروجين</td>
+            <td>تصدير خام</td>
+            <td>$15-25/كجم (معالج)</td>
+            <td>تصنيع وتصدير</td>
+            <td>مضاعفة القيمة 3-4 مرات</td>
+          </tr>
+          <tr>
+            <td><strong>الإجمالي المحتمل</strong></td>
+            <td colspan="3"><strong>مع استثمار 1-1.5 مليار دولار</strong></td>
+            <td><strong>2-3 مليار دولار/سنة</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>استراتيجية عابرة للحدود في قطاع المصايد</h3>
+    <p>تطوير مشاريع مشتركة في الصومال وموريتانيا تجمع بين رأس المال المصري وخبرة المعالجة والشحن مع الموارد السمكية المحلية. هذا النموذج يُحقق هدفين: تأمين الإمدادات وتعزيز النفوذ الاقتصادي الإقليمي.</p>
+  </section>
+
+  <!-- SECTION 9: CROSS-BORDER -->
+  <section class="section" id="crossborder">
+    <div class="section-header">
+      <div class="section-icon">🌍</div>
+      <h2>9. المشروعات العابرة للحدود: التكامل الإقليمي</h2>
+    </div>
+
+    <p>للتخفيف من العجز الهيكلي في الأمن الغذائي وتقليل الاعتماد على أسواق السلع العالمية المتقلبة، يجب على مصر تطوير نماذج إنتاجية مشتركة مع الدول الصديقة.</p>
+
+    <h3>نماذج التكامل المقترحة</h3>
+    <ul class="styled-list">
+      <li><strong>التكامل في مجال الثروة الحيوانية الأفريقية:</strong> إنشاء مشاريع مشتركة في السودان أو جنوب السودان أو شرق إفريقيا، تجمع بين الخبرة البيطرية ورأس المال المصري مع الموارد الحيوانية والأراضي المحلية. الهدف: تقليل فاتورة استيراد اللحوم بـ 500-800 مليون دولار سنوياً.</li>
+      <li><strong>الشراكات الزراعية الآسيوية:</strong> التعاون مع إندونيسيا وفيتنام لزراعة المحاصيل الاستوائية والتوابل والبن التي تستوردها مصر حالياً بأسعار مرتفعة. الهدف: توفير 200-300 مليون دولار سنوياً.</li>
+      <li><strong>مشروعات الصيد المشترك في غرب أفريقيا:</strong> موريتانيا والسنغال تمتلكان من أغنى مصايد الأسماك في العالم. رأس المال المصري + الخبرة التقنية + الموارد المحلية = نموذج رابح للطرفين.</li>
+      <li><strong>الاستثمار الزراعي في السودان:</strong> السودان يمتلك أراضٍ زراعية ضخمة غير مستغلة. الشراكة المصرية-السودانية في الإنتاج الزراعي يمكن أن تحقق الأمن الغذائي لكلا البلدين.</li>
+    </ul>
+  </section>
+
+  <!-- SECTION 10: TOURISM -->
+  <section class="section" id="tourism">
+    <div class="section-header">
+      <div class="section-icon">🏛</div>
+      <h2>10. السياحة واللوجستيات: الفرص الضائعة</h2>
+    </div>
+
+    <p>تمتد الفرص الضائعة في مصر إلى ما هو أبعد من الزراعة والصناعة لتشمل الخدمات ذات القيمة العالية، حيث يقل أداؤها بشكل كبير رغم المزايا الهيكلية الضخمة.</p>
+
+    <h3>الفجوة السياحية: مقارنة دولية</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>الدولة</th>
+            <th>إيرادات السياحة</th>
+            <th>عدد السياح</th>
+            <th>متوسط الإنفاق/سائح</th>
+            <th>الميزة التنافسية</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🇹🇷 تركيا</td>
+            <td>45-50 مليار دولار</td>
+            <td>50 مليون</td>
+            <td>~$900</td>
+            <td>تنوع المنتج السياحي</td>
+          </tr>
+          <tr>
+            <td>🇦🇪 الإمارات (دبي)</td>
+            <td>30+ مليار دولار</td>
+            <td>17 مليون</td>
+            <td>~$1,800</td>
+            <td>سياحة فاخرة ومؤتمرات</td>
+          </tr>
+          <tr>
+            <td>🇲🇦 المغرب</td>
+            <td>8-9 مليار دولار</td>
+            <td>14 مليون</td>
+            <td>~$600</td>
+            <td>سياحة ثقافية وبيئية</td>
+          </tr>
+          <tr>
+            <td>🇪🇬 مصر (الحالي)</td>
+            <td>13-15 مليار دولار</td>
+            <td>15 مليون</td>
+            <td>~$900</td>
+            <td>سياحة شاطئية بالأساس</td>
+          </tr>
+          <tr>
+            <td><strong>🇪🇬 مصر (الهدف)</strong></td>
+            <td><strong>25-30 مليار دولار</strong></td>
+            <td><strong>25 مليون</strong></td>
+            <td><strong>~$1,200</strong></td>
+            <td><strong>تنويع: علاجية + ثقافية + بيئية</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight-box">
+      <strong>💰 القيمة الضائعة:</strong>
+      <p>من خلال الفشل في تطوير مجالات متخصصة ذات هامش مرتفع (السياحة العلاجية، التعليمية، البيئية، مؤتمرات الأعمال)، تترك مصر ما يقدر بنحو 10-15 مليار دولار من الإيرادات السنوية المحتملة على الطاولة.</p>
+    </div>
+
+    <h3>إمكانات اللوجستيات الإقليمية</h3>
+    <p>رغم سيطرتها على قناة السويس (التي تتعامل مع ~12% من التجارة العالمية)، لم تحقق مصر الأداء المطلوب كمنصة لوجستية إقليمية. يمكن أن يؤدي دمج البنية التحتية للموانئ مع مناطق معالجة الصادرات المتخصصة ومراكز الخدمات المهنية إلى جذب ما يقدر بنحو 5-8 مليارات دولار من الإيرادات الإقليمية الإضافية ذات القيمة المضافة سنوياً.</p>
+  </section>
+
+  <!-- SECTION 11: EXECUTION -->
+  <section class="section" id="execution">
+    <div class="section-header">
+      <div class="section-icon">📋</div>
+      <h2>11. خطة التنفيذ الوطنية: الخارطة العملية</h2>
+    </div>
+
+    <p>تتطلب هذه الخطة تحولاً في التنفيذ من المشروعات الحكومية المباشرة إلى نماذج الشراكة بين القطاعين العام والخاص (PPP) وتمكين القطاع الخاص. الأولوية ليست في الإنفاق الحكومي الإضافي، بل في إعادة توجيه رأس المال الموجود نحو القطاعات المنتجة.</p>
+
+    <h3>المرحلة الأولى: التأسيس (السنوات 1-2)</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>المبادرة</th>
+            <th>التكلفة</th>
+            <th>الجهة المنفذة</th>
+            <th>العائد المتوقع (السنة 3)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>10 مراكز تبريد إقليمية</td>
+            <td>800 مليون دولار</td>
+            <td>شراكة عام-خاص</td>
+            <td>تقليل خسائر 15% = 500 مليون دولار</td>
+          </tr>
+          <tr>
+            <td>صندوق ضمان ائتمان الصادرات</td>
+            <td>2 مليار دولار</td>
+            <td>البنك المركزي</td>
+            <td>تمكين 50,000 شركة للتصدير</td>
+          </tr>
+          <tr>
+            <td>بطاقة النقل الذكية الوطنية</td>
+            <td>300 مليون دولار</td>
+            <td>حكومي + قطاع خاص</td>
+            <td>300-500 مليون دولار إيرادات إضافية</td>
+          </tr>
+          <tr>
+            <td>5 GW طاقة شمسية (المرحلة الأولى)</td>
+            <td>3 مليار دولار</td>
+            <td>شراكة عام-خاص</td>
+            <td>توفير 1.5-2 مليار دولار واردات</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>المرحلة الثانية: التوسع (السنوات 3-5)</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>المبادرة</th>
+            <th>التكلفة</th>
+            <th>الجهة المنفذة</th>
+            <th>العائد المتوقع (السنة 5)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>3 مناطق تصنيع زراعي</td>
+            <td>400 مليون دولار</td>
+            <td>القطاع الخاص</td>
+            <td>مضاعفة الصادرات المعالجة</td>
+          </tr>
+          <tr>
+            <td>تحديث المناطق الصناعية</td>
+            <td>1.5 مليار دولار</td>
+            <td>حكومي</td>
+            <td>رفع الإنتاجية 30-40%</td>
+          </tr>
+          <tr>
+            <td>3 GW طاقة رياح إضافية</td>
+            <td>2 مليار دولار</td>
+            <td>القطاع الخاص</td>
+            <td>توفير 1-1.5 مليار دولار</td>
+          </tr>
+          <tr>
+            <td>مراكز نقل التكنولوجيا الجامعية</td>
+            <td>500 مليون دولار</td>
+            <td>شراكة عام-خاص</td>
+            <td>100 اختراع مُسوَّق سنوياً</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>المرحلة الثالثة: التوطيد (السنوات 6-10)</h3>
+    <ul class="styled-list">
+      <li>الوصول إلى هدف الصادرات الصناعية 600 دولار للفرد</li>
+      <li>تحقيق أهداف توليد النقد الأجنبي الزراعي (5-7 مليار دولار سنوياً)</li>
+      <li>توطيد وفورات الطاقة (5-7 مليار دولار سنوياً)</li>
+      <li>الوصول إلى هدف مشاركة المرأة في سوق العمل (35-40%)</li>
+      <li>تصدير فائض الطاقة المتجددة لأوروبا</li>
+    </ul>
+  </section>
+
+  <!-- SECTION 12: FINANCIAL MODEL -->
+  <section class="section" id="model">
+    <div class="section-header">
+      <div class="section-icon">📊</div>
+      <h2>12. النموذج المالي: التأثير التراكمي للنقد الأجنبي (10 سنوات)</h2>
+    </div>
+
+    <p>يعتمد هذا النموذج على تقديرات محافظة مبنية على مقارنات دولية موثقة وبيانات قطاعية معتمدة. جميع الأرقام تمثل الحد الأدنى المتحفظ وليس السيناريو الأمثل.</p>
+
+    <div class="key-numbers">
+      <div class="key-number-card">
+        <span class="number">$6B</span>
+        <div class="label">التأثير السنوي (السنة 3)</div>
+      </div>
+      <div class="key-number-card">
+        <span class="number accent">$19B</span>
+        <div class="label">التأثير السنوي (السنة 5)</div>
+      </div>
+      <div class="key-number-card">
+        <span class="number">$37B</span>
+        <div class="label">التأثير السنوي (السنة 7)</div>
+      </div>
+      <div class="key-number-card">
+        <span class="number success">$50.5B</span>
+        <div class="label">التأثير السنوي (السنة 10)</div>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>القطاع</th>
+            <th>السنة 3</th>
+            <th>السنة 5</th>
+            <th>السنة 7</th>
+            <th>السنة 10</th>
+            <th>التراكمي (10 سنوات)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>الزراعة والغذاء</td>
+            <td>1.0 مليار</td>
+            <td>2.5 مليار</td>
+            <td>3.0 مليار</td>
+            <td>3.5 مليار</td>
+            <td>22-25 مليار دولار</td>
+          </tr>
+          <tr>
+            <td>الصناعة والتصدير</td>
+            <td>3.0 مليار</td>
+            <td>10.0 مليار</td>
+            <td>25.0 مليار</td>
+            <td>35.0 مليار</td>
+            <td>150-180 مليار دولار</td>
+          </tr>
+          <tr>
+            <td>الطاقة المتجددة</td>
+            <td>1.5 مليار</td>
+            <td>5.0 مليار</td>
+            <td>6.0 مليار</td>
+            <td>7.0 مليار</td>
+            <td>50-70 مليار دولار</td>
+          </tr>
+          <tr>
+            <td>رأس المال البشري (غير مباشر)</td>
+            <td>0.5 مليار</td>
+            <td>1.5 مليار</td>
+            <td>3.0 مليار</td>
+            <td>5.0 مليار</td>
+            <td>25-35 مليار دولار</td>
+          </tr>
+          <tr>
+            <td><strong>الإجمالي</strong></td>
+            <td><strong>6.0 مليار</strong></td>
+            <td><strong>19.0 مليار</strong></td>
+            <td><strong>37.0 مليار</strong></td>
+            <td><strong>50.5 مليار</strong></td>
+            <td><strong>250-310 مليار دولار</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight-box">
+      <strong>📌 الخلاصة المالية:</strong>
+      <p>التأثير التراكمي البالغ 250-310 مليار دولار على مدى عشر سنوات يتجاوز إجمالي الدين الخارجي الحالي لمصر (155 مليار دولار في الربع الرابع من 2024). هذا يعني أن الاستثمار الصحيح في القطاعات الإنتاجية كان كفيلاً بجعل حزم الإنقاذ من صندوق النقد الدولي غير ضرورية.</p>
+    </div>
+  </section>
+
+</div><!-- end main-content -->
+
+<!-- CONCLUSION -->
+<!-- LOGISTICS SECTION -->
+<section id="logistics" class="section">
+  <div class="section-header">
+    <div class="section-icon">🚢</div>
+    <h2>13. محور قناة السويس واللوجستيات: رؤية تتجاوز سنغافورة وجبل علي</h2>
+  </div>
+
+  <p>لا يمكن الحديث عن نهضة اقتصادية حقيقية في مصر دون إعادة تصور جذري لدور قناة السويس. القناة ليست مجرد ممر مائي لتحصيل رسوم العبور، بل هي <strong>أهم شريان تجاري في العالم</strong>. إن الاكتفاء بتحصيل الرسوم هو إهدار لقيمة استراتيجية لا تقدر بثمن. النموذج المقترح هنا يتجاوز نماذج سنغافورة وجبل علي، ليخلق مركزاً عالمياً متكاملاً للخدمات اللوجستية والصناعية والتجارية.</p>
+
+  <div class="stat-card" style="background: linear-gradient(135deg, #0d2137, #1a3a5c); color: #fff; margin: 30px 0;">
+    <h3 style="color: #c9a227;">📊 مقارنة النماذج العالمية: أين تقف مصر؟</h3>
+    <table style="width:100%; border-collapse: collapse; color: #e8e8e8; margin-top: 15px;">
+      <thead>
+        <tr style="background: rgba(201,162,39,0.3);">
+          <th style="padding: 10px; text-align: right; border: 1px solid rgba(255,255,255,0.2);">المؤشر</th>
+          <th style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.2);">سنغافورة</th>
+          <th style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.2);">جبل علي (دبي)</th>
+          <th style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.2);">مصر (الحالي)</th>
+          <th style="padding: 10px; text-align: center; border: 1px solid #c9a227;">مصر (المستهدف)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; text-align: right; border: 1px solid rgba(255,255,255,0.1);">إيرادات الميناء/اللوجستيات</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">$30-35 مليار</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">$20-25 مليار</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">$8-10 مليار</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid #c9a227; color: #c9a227; font-weight: bold;">$30-40 مليار</td>
+        </tr>
+        <tr style="background: rgba(255,255,255,0.05);">
+          <td style="padding: 10px; text-align: right; border: 1px solid rgba(255,255,255,0.1);">خدمات تموين السفن</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">$50+ مليار</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">$15 مليار</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">$0.5 مليار</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid #c9a227; color: #c9a227; font-weight: bold;">$8-12 مليار</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; text-align: right; border: 1px solid rgba(255,255,255,0.1);">مناطق حرة صناعية</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">متطورة جداً</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">متطورة</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">محدودة</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid #c9a227; color: #c9a227; font-weight: bold;">10 مناطق متخصصة</td>
+        </tr>
+        <tr style="background: rgba(255,255,255,0.05);">
+          <td style="padding: 10px; text-align: right; border: 1px solid rgba(255,255,255,0.1);">الميزة الاستراتيجية</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">موقع مالاكا</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">مركز خليجي</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">قناة السويس</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid #c9a227; color: #c9a227; font-weight: bold;">السويس + أفريقيا + أوروبا</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>النموذج الاقتصادي المقترح: من ممر مائي إلى منصة قيمة مضافة</h3>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 25px 0;">
+    <div style="background: #f0f7ff; border-right: 4px solid #1565c0; padding: 20px; border-radius: 8px;">
+      <h4 style="color: #1565c0; margin-bottom: 12px;">🏭 المناطق الصناعية الحرة المتخصصة</h4>
+      <p style="color: #1a1a2e; font-size: 0.95rem; line-height: 1.8;">إنشاء 10 مناطق صناعية حرة متخصصة على ضفتي القناة: استيراد المكونات من آسيا، تجميعها وتصديرها لأوروبا وأفريقيا مستفيدين من اتفاقيات الكوميسا والشراكة الأوروبية. العائد المتوقع: <strong>$5-8 مليار سنوياً</strong>.</p>
+    </div>
+    <div style="background: #f0fff4; border-right: 4px solid #2e7d32; padding: 20px; border-radius: 8px;">
+      <h4 style="color: #2e7d32; margin-bottom: 12px;">⛽ مركز تموين السفن والخدمات البحرية</h4>
+      <p style="color: #1a1a2e; font-size: 0.95rem; line-height: 1.8;">تطوير خدمات تموين السفن بالوقود الأخضر (الأمونيا الخضراء، الميثانول)، الصيانة، وتغيير الأطقم. سنغافورة بلا قناة تحقق $50 مليار من هذه الخدمات. العائد المتوقع لمصر: <strong>$8-12 مليار سنوياً</strong>.</p>
+    </div>
+    <div style="background: #fff8e1; border-right: 4px solid #f57f17; padding: 20px; border-radius: 8px;">
+      <h4 style="color: #f57f17; margin-bottom: 12px;">📦 مراكز التوزيع الإقليمية الذكية</h4>
+      <p style="color: #1a1a2e; font-size: 0.95rem; line-height: 1.8;">جذب شركات مثل أمازون وعلي بابا وإيكيا لإنشاء مراكز توزيع إقليمية ضخمة تخدم الشرق الأوسط وأفريقيا وأوروبا. يتطلب بنية رقمية متطورة وتخليصاً جمركياً ذكياً في أقل من 4 ساعات. العائد المتوقع: <strong>$3-5 مليار سنوياً</strong>.</p>
+    </div>
+    <div style="background: #fce4ec; border-right: 4px solid #c62828; padding: 20px; border-radius: 8px;">
+      <h4 style="color: #c62828; margin-bottom: 12px;">🏦 المركز المالي والتجاري البحري</h4>
+      <p style="color: #1a1a2e; font-size: 0.95rem; line-height: 1.8;">إنشاء مركز مالي وتجاري عالمي لخدمات التأمين البحري، التمويل التجاري، والتحكيم الدولي. تحويل المنطقة من ممر عبور إلى مركز أعمال متكامل على غرار لويدز لندن للتأمين البحري. العائد المتوقع: <strong>$2-4 مليار سنوياً</strong>.</p>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <strong>💡 الميزة التنافسية الفريدة لمصر:</strong>
+    <p style="color: #1a1a2e; margin-top: 10px;">سنغافورة تتحكم في مضيق ملقا. جبل علي يخدم الخليج. لكن مصر تتحكم في <strong>الرابط الوحيد بين المحيط الهندي والبحر المتوسط</strong>، وتقع في قلب ثلاث قارات (أفريقيا، آسيا، أوروبا)، وتمتلك ساحلين (البحر الأحمر والبحر المتوسط)، وتتصل بـ 54 دولة أفريقية عبر البر. هذه ميزة لا تملكها سنغافورة ولا جبل علي ولا أي ميناء آخر في العالم. التحدي الوحيد هو الإرادة السياسية لاستثمارها.</p>
+  </div>
+
+  <div class="stat-card">
+    <h3>الأثر الاقتصادي التراكمي لمحور السويس (10 سنوات)</h3>
+    <table class="data-table">
+      <thead><tr><th>القطاع</th><th>العائد السنوي (السنة 5)</th><th>العائد السنوي (السنة 10)</th><th>التراكمي</th></tr></thead>
+      <tbody>
+        <tr><td>مناطق صناعية حرة</td><td>$3 مليار</td><td>$8 مليار</td><td>$40-50 مليار</td></tr>
+        <tr><td>تموين السفن والخدمات البحرية</td><td>$4 مليار</td><td>$12 مليار</td><td>$60-70 مليار</td></tr>
+        <tr><td>مراكز التوزيع الذكية</td><td>$2 مليار</td><td>$5 مليار</td><td>$25-30 مليار</td></tr>
+        <tr><td>الخدمات المالية والتجارية</td><td>$1 مليار</td><td>$4 مليار</td><td>$15-20 مليار</td></tr>
+        <tr style="font-weight: bold; background: #e8f5e9;"><td>الإجمالي</td><td>$10 مليار</td><td>$29 مليار</td><td>$140-170 مليار</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- MINING SECTION -->
+<section id="mining" class="section">
+  <div class="section-header">
+    <div class="section-icon">⛏️</div>
+    <h2>14. الثروة المعدنية والموارد الطبيعية: من تصدير الخام إلى تعظيم القيمة المضافة</h2>
+  </div>
+
+  <p>مصر غنية بالموارد الطبيعية، لكن <strong>الخطيئة الاقتصادية الكبرى</strong> تكمن في تصدير هذه الموارد في صورتها الخام بأسعار زهيدة، ثم استيرادها كمنتجات نهائية بأسعار مضاعفة. الرؤية الجديدة تقوم على مبدأ صارم واحد: <strong style="color: #c62828;">لا تصدير للمواد الخام دون قيمة مضافة.</strong></p>
+
+  <div class="stat-card" style="background: linear-gradient(135deg, #1a0a00, #3d1a00); color: #fff; margin: 30px 0;">
+    <h3 style="color: #ffd700;">💎 خريطة الثروات المعدنية المصرية غير المستغلة</h3>
+    <table style="width:100%; border-collapse: collapse; color: #e8e8e8; margin-top: 15px;">
+      <thead>
+        <tr style="background: rgba(255,215,0,0.2);">
+          <th style="padding: 10px; text-align: right; border: 1px solid rgba(255,255,255,0.2);">المورد</th>
+          <th style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.2);">الموقع</th>
+          <th style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.2);">سعر الخام (طن)</th>
+          <th style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.2);">سعر المنتج النهائي (طن)</th>
+          <th style="padding: 10px; text-align: center; border: 1px solid #ffd700; color: #ffd700;">مضاعف القيمة</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; text-align: right; border: 1px solid rgba(255,255,255,0.1);">رمال السيليكا</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">سيناء، الصحراء الغربية</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">$20-30</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">$5,000-50,000 (رقائق)</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid #ffd700; color: #ffd700; font-weight: bold;">250x - 1,600x</td>
+        </tr>
+        <tr style="background: rgba(255,255,255,0.05);">
+          <td style="padding: 10px; text-align: right; border: 1px solid rgba(255,255,255,0.1);">صخر الفوسفات</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">الصحراء الشرقية، أبو طرطور</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">$80-120</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">$600-900 (أسمدة مركبة)</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid #ffd700; color: #ffd700; font-weight: bold;">6x - 8x</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; text-align: right; border: 1px solid rgba(255,255,255,0.1);">الذهب</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">السكري، الصحراء الشرقية</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">$60,000/كغ (سبائك)</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">$150,000+/كغ (مجوهرات)</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid #ffd700; color: #ffd700; font-weight: bold;">2.5x - 5x</td>
+        </tr>
+        <tr style="background: rgba(255,255,255,0.05);">
+          <td style="padding: 10px; text-align: right; border: 1px solid rgba(255,255,255,0.1);">الرمال السوداء (تيتانيوم/زركونيوم)</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">الساحل الشمالي، سيناء</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">$200-400</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">$5,000-15,000 (طيران/فضاء)</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid #ffd700; color: #ffd700; font-weight: bold;">15x - 40x</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; text-align: right; border: 1px solid rgba(255,255,255,0.1);">الكاولين (طين الصين)</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">سيناء، الصحراء الشرقية</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">$30-50</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.1);">$500-2,000 (بورسلان/إلكترونيات)</td>
+          <td style="padding: 10px; text-align: center; border: 1px solid #ffd700; color: #ffd700; font-weight: bold;">10x - 40x</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>استراتيجية تعظيم القيمة المضافة لكل مورد:</h3>
+
+  <div style="margin: 20px 0;">
+    <div style="background: #fff3e0; border-right: 5px solid #e65100; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+      <h4 style="color: #e65100;">🔬 1. السيليكا: من رمال الصحراء إلى رقائق المستقبل</h4>
+      <p style="color: #1a1a2e; line-height: 1.9;">مصر تمتلك أنقى أنواع رمال السيليكا في العالم. بدلاً من تصدير الطن الخام بـ 20-30 دولاراً، الاستراتيجية تمر بثلاث مراحل: <strong>(1)</strong> توطين صناعة الزجاج عالي الجودة والألياف الضوئية ($500-1,000/طن)، <strong>(2)</strong> إنتاج بولي-سيليكون لصناعة الخلايا الشمسية ($5,000/طن)، <strong>(3)</strong> على المدى البعيد، إنشاء مجمع لصناعة أشباه الموصلات بالشراكة مع كوريا الجنوبية أو تايوان. الإمارات بدأت هذا المسار بالفعل. مصر تمتلك المادة الخام ولا تستثمرها.</p>
+    </div>
+
+    <div style="background: #e8f5e9; border-right: 5px solid #2e7d32; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+      <h4 style="color: #2e7d32;">🌱 2. الفوسفات: من صخر خام إلى صناعة غذائية عالمية</h4>
+      <p style="color: #1a1a2e; line-height: 1.9;">مصر تمتلك 6% من احتياطيات الفوسفات العالمية. الاستراتيجية: وقف تصدير الصخر الخام فوراً، والتحول الكامل نحو إنتاج حمض الفوسفوريك والأسمدة الفوسفاتية المركبة (DAP, MAP). هذا يضاعف العائد 6-8 مرات ويدعم الأمن الغذائي المصري والأفريقي. المغرب (المنافس الأكبر) يطبق هذه الاستراتيجية بنجاح منذ سنوات.</p>
+    </div>
+
+    <div style="background: #fff8e1; border-right: 5px solid #f9a825; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+      <h4 style="color: #f9a825;">💛 3. الذهب: من سبائك خام إلى عاصمة مجوهرات عالمية</h4>
+      <p style="color: #1a1a2e; line-height: 1.9;">بدلاً من تصدير الذهب كسبائك خام، الاستراتيجية تقوم على إنشاء <strong>مدينة مصرية عالمية للذهب والمجوهرات</strong> في منطقة قريبة من المناجم (الصحراء الشرقية). مصر لديها تاريخ حضاري عريق في صياغة الذهب يمتد لآلاف السنين. إحياء هذا التراث بتقنيات حديثة وتصدير المجوهرات المصنعة يمكن أن يحقق عائداً يضاهي ما تحققه إيطاليا وتركيا من صناعة المجوهرات.</p>
+    </div>
+
+    <div style="background: #e3f2fd; border-right: 5px solid #1565c0; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+      <h4 style="color: #1565c0;">🚀 4. الرمال السوداء والمعادن النادرة: صناعات المستقبل</h4>
+      <p style="color: #1a1a2e; line-height: 1.9;">الرمال السوداء الغنية بالتيتانيوم والزركونيوم والإلمنيت تدخل في صناعات الطيران والفضاء والإلكترونيات الدقيقة والطاقة النووية. هذه الموارد الاستراتيجية يتنافس عليها العالم. مصر تمتلكها على سواحلها ولا تستثمرها. إنشاء شراكات مع شركات الطيران والفضاء الأوروبية والأمريكية لتطوير هذه الصناعات يمكن أن يحول مصر إلى لاعب استراتيجي في سلاسل التوريد العالمية للتكنولوجيا المتقدمة.</p>
+    </div>
+  </div>
+
+  <div class="stat-card">
+    <h3>الأثر الاقتصادي المتوقع لقطاع التعدين (مقارنة بالوضع الحالي)</h3>
+    <table class="data-table">
+      <thead><tr><th>القطاع المعدني</th><th>العائد الحالي (سنوياً)</th><th>العائد المستهدف (سنة 7)</th><th>المضاعف</th></tr></thead>
+      <tbody>
+        <tr><td>السيليكا والزجاج والخلايا الشمسية</td><td>$100 مليون</td><td>$2-3 مليار</td><td>20-30x</td></tr>
+        <tr><td>الفوسفات والأسمدة المركبة</td><td>$400 مليون</td><td>$3-4 مليار</td><td>8-10x</td></tr>
+        <tr><td>الذهب والمجوهرات المصنعة</td><td>$300 مليون</td><td>$2-3 مليار</td><td>7-10x</td></tr>
+        <tr><td>الرمال السوداء والمعادن النادرة</td><td>$50 مليون</td><td>$1-2 مليار</td><td>20-40x</td></tr>
+        <tr><td>الكاولين والسيراميك المتقدم</td><td>$80 مليون</td><td>$1-1.5 مليار</td><td>12-18x</td></tr>
+        <tr style="font-weight: bold; background: #e8f5e9;"><td>الإجمالي</td><td>$930 مليون</td><td>$9-13.5 مليار</td><td>10-15x</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="highlight-box">
+    <strong>📌 الخلاصة الاستراتيجية للتعدين:</strong>
+    <p style="color: #1a1a2e; margin-top: 10px;">مصر تصدر حالياً أقل من مليار دولار من المنتجات المعدنية سنوياً. مع تطبيق استراتيجية القيمة المضافة الكاملة، يمكن رفع هذا الرقم إلى <strong>$10-15 مليار سنوياً خلال 7 سنوات</strong>. هذا يعني أن الثروة المعدنية المصرية وحدها — إذا أُحسن استثمارها — يمكن أن تحل محل كامل الدين الخارجي لمصر خلال عقد واحد.</p>
+  </div>
+</section>
+
+<section id="aquaponics" class="section">
+        <h2>11. المشروع القومي للأكوابونيكس الأسري: ثورة زراعية لامركزية وتمكين اجتماعي</h2>
+        <p>بدلاً من إنفاق المليارات على استصلاح أراضي صحراوية تفتقر للمياه والبنية التحتية (مثل مشروع 1.5 مليون فدان الذي تعثر بسبب ملوحة التربة)، يقترح هذا النموذج إطلاق "المشروع القومي للأكوابونيكس الأسري". يعتمد المشروع على توزيع وحدات زراعة مائية متكاملة (Aquaponics) - تجمع بين تربية الأسماك وزراعة الخضروات العضوية - على الأسر الفقيرة والمتوسطة في الريف المصري، مع التركيز بشكل خاص على السيدات المعيلات.</p>
+        
+        <h3>النموذج الاقتصادي والتمويلي:</h3>
+        <ul>
+            <li><strong>التكلفة الرأسمالية:</strong> تكلفة الوحدة المنزلية المنتجة تتراوح بين 1000 إلى 1500 دولار فقط.</li>
+            <li><strong>آلية التمويل:</strong> يتم تمويل الوحدات عبر قروض ميسرة جداً من صناديق التنمية (مثل جهاز تنمية المشروعات)، بضمان الإنتاج نفسه، دون تحميل الأسر أعباء ضمانات بنكية معقدة.</li>
+            <li><strong>التسويق المركزي (السر الحقيقي للنجاح):</strong> تقوم شركة إدارة حكومية/خاصة (أو تعاونيات زراعية حديثة) بتوفير الزريعة والبذور والأعلاف، ثم تقوم بجمع الإنتاج (أسماك وخضروات أورجانيك) وتسويقه محلياً وتصديرياً بأسعار مميزة تعكس جودته العضوية.</li>
+            <li><strong>ضمان السداد:</strong> يتم استقطاع قسط القرض تلقائياً من عائد بيع المحصول للشركة المركزية، مما يضمن نسبة سداد تقارب 100% ويحمي أموال الدولة.</li>
+        </ul>
+        
+        <div class="stat-card">
+            <h3>الأثر الاقتصادي والاجتماعي (مقارنة بمشروعات البنية التحتية)</h3>
+            <ul>
+                <li><strong>خلق الثروة بدلاً من الدعم:</strong> يتحول المواطن من متلقٍ للدعم الحكومي إلى منتج وصاحب عمل، مما يخلق طبقة وسطى ريفية جديدة.</li>
+                <li><strong>تمكين المرأة:</strong> يوفر المشروع فرصة عمل مثالية للسيدات داخل منازلهن، مما يرفع دخل الأسرة دون الإخلال بالنسيج الاجتماعي.</li>
+                <li><strong>كفاءة رأس المال:</strong> مليار دولار واحد (جزء بسيط من تكلفة قطار المونوريل) يكفي لتمويل ما يقرب من مليون وحدة أكوابونيكس، مما يخلق مليون فرصة عمل مباشرة، وينتج مئات الآلاف من الأطنان من الغذاء العضوي عالي القيمة.</li>
+                <li><strong>وقف الهجرة:</strong> توفير دخل مستدام للشباب في قراهم يحد من الهجرة الداخلية للمدن والهجرة غير الشرعية للخارج، ويحولهم من عبء اقتصادي إلى قوة إنتاجية.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="decentralized-industry" class="section">
+        <h2>12. نموذج الصناعة اللامركزية المتكاملة: من الورشة إلى التصدير</h2>
+        <p>الصناعة لا تعني فقط المصانع العملاقة التي تتطلب استثمارات مليارية. النموذج المقترح يعتمد على "التصنيع اللامركزي المنسق"، حيث يتم ربط الجامعات (كليات الهندسة والعلوم والزراعة) ومراكز الأبحاث والمدارس الصناعية بشبكة واسعة من الورش الصغيرة والمتوسطة، على غرار النموذج التايواني أو الألماني (Mittelstand).</p>
+        
+        <h3>آلية التنفيذ والتخطيط المركزي:</h3>
+        <ul>
+            <li><strong>التصميم المركزي والبحث والتطوير:</strong> تقوم الجامعات ومراكز الأبحاث بتصميم منتجات قابلة للتصدير أو بديلة للمستورد (مثل قطع غيار السيارات، المكونات الإلكترونية، المعدات الزراعية الخفيفة).</li>
+            <li><strong>الإنتاج اللامركزي المتخصص:</strong> يتم توزيع تصنيع الأجزاء والمكونات الدقيقة على آلاف الورش الصغيرة والمدارس الصناعية. كل ورشة تتخصص في إنتاج جزء محدد بدقة متناهية بدلاً من محاولة إنتاج منتج كامل رديء الجودة.</li>
+            <li><strong>الإشراف الأكاديمي وضمان الجودة:</strong> يقوم أساتذة الجامعات ومهندسو الإنتاج بالإشراف الفني المباشر على الورش لضمان جودة الإنتاج (Quality Control). هذا التخطيط المركزي القوي يجعل كل ورشة صغيرة تنتج بمستوى "أستاذ جامعي في هندسة الإنتاج".</li>
+            <li><strong>التجميع والتصدير:</strong> يتم تجميع المكونات التي أنتجتها الورش في مصانع مركزية أكبر (مستوى أعلى من سلسلة القيمة)، ثم تصديرها كمنتج نهائي عالي الجودة يحمل علامة "صنع في مصر".</li>
+        </ul>
+        
+        <div class="stat-card">
+            <h3>العائد الاقتصادي والاجتماعي للنموذج الصناعي</h3>
+            <ul>
+                <li><strong>تدريب عملي حقيقي:</strong> تحويل المدارس الصناعية وكليات الهندسة من قاعات دراسة نظرية إلى مراكز إنتاج حقيقية تدر عائداً وتوفر تدريباً مدفوع الأجر للطلاب.</li>
+                <li><strong>تكامل سلاسل الإمداد:</strong> خلق شبكة صناعية مترابطة (Industrial Clusters) بدلاً من الجزر الصناعية المنعزلة التي تعتمد كلياً على المكونات المستوردة.</li>
+                <li><strong>تشغيل الشباب:</strong> تحويل الشباب العاطل على المقاهي إلى أصحاب ورش منتجة أو عمال مهرة، مما يخلق ثروة حقيقية ويقضي على البطالة المقنعة، ويمنع تسرب الكفاءات للخارج.</li>
+            </ul>
+        </div>
+    </section>
+
+<section class="conclusion-section" id="conclusion">
+  <div class="conclusion-content">
+    <h2>13. الخلاصة: الاختيار الحاسم</h2>
+
+    <p>تقف مصر عند نقطة تحول حرجة. لم تكن الأزمة الاقتصادية في العقد الماضي نتيجة حتمية للصدمات العالمية، بل كانت نتيجة مباشرة لخيار سياسي متعمد: إعطاء الأولوية لمشروعات البنية التحتية الكبرى غير القابلة للتداول والممولة بالديون على حساب القطاعات الإنتاجية المولدة للصادرات.</p>
+
+    <div class="path-comparison" style="margin: 40px 0;">
+      <div class="path-card current">
+        <h4>المسار الحالي</h4>
+        <ul>
+          <li>ديون خارجية متراكمة ($168 مليار)</li>
+          <li>تخفيضات متكررة في قيمة العملة</li>
+          <li>اعتماد على حزم إنقاذ صندوق النقد</li>
+          <li>عجز هيكلي في النقد الأجنبي</li>
+          <li>تضخم مزمن (33%+)</li>
+          <li>هروب رؤوس الأموال والكفاءات</li>
+        </ul>
+      </div>
+      <div class="path-card alternative">
+        <h4>المسار البديل</h4>
+        <ul>
+          <li>250-310 مليار دولار تراكمياً (10 سنوات)</li>
+          <li>استقرار سعر الصرف</li>
+          <li>استقلالية مالية عن صندوق النقد</li>
+          <li>فائض هيكلي في النقد الأجنبي</li>
+          <li>تضخم منضبط وعملة مستقرة</li>
+          <li>استقطاب الاستثمارات والكفاءات</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>توضح النمذجة المحافظة أن إعادة تخصيص 30% فقط من تمويل المشروعات الكبرى الأخيرة (24-30 مليار دولار) نحو البدائل الإنتاجية كان من شأنه أن يولد تأثيراً تراكمياً من النقد الأجنبي يتراوح بين 250-310 مليار دولار على مدى عشر سنوات — وهو ما كان سيعوض بالكامل أزمة الديون الخارجية الحالية لمصر.</p>
+
+    <div class="conclusion-quote">
+      "يجب أن يفسح عصر بناء الآثار المجال لعصر بناء الأسواق.<br>
+      إن البقاء الاقتصادي لمصر وازدهارها في المستقبل يعتمدان كلياً على استعدادها<br>
+      للتحول من وهم النمو الممول بالديون إلى واقع توليد الثروة الإنتاجية."
+    </div>
+
+    <p style="font-size:0.9rem; color: rgba(255,255,255,0.6);">
+      طارق ثروت يوسف — خبير اقتصادي والرئيس التنفيذي لشركة أوشن بيرل سي فود إنترناشيونال — أبريل 2026
+    </p>
+  </div>
+</section>
+
+<!-- REFERENCES -->
+<section class="references-section" id="references">
+  <div class="main-content">
+    <h2 class="section-title" style="color: var(--primary);">المراجع والمصادر</h2>
+    <ol class="ref-list">
+      <li>البنك المركزي المصري — إحصاءات الدين الخارجي الربع سنوية 2013-2024</li>
+      <li>البنك الدولي — قاعدة بيانات مؤشرات التنمية العالمية (WDI) — مصر</li>
+      <li>صندوق النقد الدولي — تقارير المادة الرابعة لمصر 2019-2024</li>
+      <li>الجهاز المركزي للتعبئة العامة والإحصاء (CAPMAS) — إحصاءات الزراعة والصناعة</li>
+      <li>منظمة الأغذية والزراعة للأمم المتحدة (FAO) — بيانات خسائر ما بعد الحصاد في مصر</li>
+      <li>وزارة التجارة والصناعة المصرية — تقارير الصادرات السنوية 2020-2024</li>
+      <li>هيئة الاستثمار والمناطق الحرة (GAFI) — تقارير الاستثمار الأجنبي المباشر</li>
+      <li>المنظمة العالمية للسياحة (UNWTO) — إحصاءات السياحة الدولية 2023-2024</li>
+      <li>الوكالة الدولية للطاقة المتجددة (IRENA) — تقرير الطاقة المتجددة في مصر 2023</li>
+      <li>هيئة قناة السويس — التقارير السنوية 2019-2024</li>
+      <li>البنك الأفريقي للتنمية — تقارير التكامل الاقتصادي الأفريقي</li>
+      <li>المركز الدولي للتجارة (ITC) — قاعدة بيانات Trade Map — مصر</li>
+      <li>تقرير التنافسية العالمي — المنتدى الاقتصادي العالمي (WEF) 2023-2024</li>
+      <li>تقرير التنمية البشرية — برنامج الأمم المتحدة الإنمائي (UNDP) 2023</li>
+      <li>تقارير المركز المصري للدراسات الاقتصادية (ECES) — 2022-2024</li>
+    </ol>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    <strong>خطة اقتصادية بديلة لمصر</strong> — إعداد: <strong>طارق ثروت يوسف</strong><br>
+    الرئيس التنفيذي — أوشن بيرل سي فود إنترناشيونال | أبريل 2026<br>
+    <small>جميع الأرقام الواردة في هذه الدراسة تقديرات محافظة مبنية على بيانات موثقة من مصادر دولية معتمدة.</small>
+  </p>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  // Mobile menu toggle
+  function toggleMenu() {
+    document.getElementById('navMenu').classList.toggle('open');
+  }
+
+  // Scroll to top button
+  window.addEventListener('scroll', function() {
+    const btn = document.getElementById('scrollTop');
+    if (window.scrollY > 400) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  });
+
+  // Close mobile menu when clicking a link
+  document.querySelectorAll('.nav-menu a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.getElementById('navMenu').classList.remove('open');
+    });
+  });
+
+  // Active nav highlighting
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', function() {
+    let current = '';
+    sections.forEach(function(section) {
+      const sectionTop = section.offsetTop - 80;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+    document.querySelectorAll('.nav-menu a').forEach(function(link) {
+      link.style.color = '';
+      if (link.getAttribute('href') === '#' + current) {
+        link.style.color = 'var(--accent)';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
